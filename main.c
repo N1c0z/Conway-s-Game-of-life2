@@ -22,8 +22,8 @@ uint8_t TABLE[TSIZEE][TSIZEE];
 uint8_t TABLE2[TSIZEE][TSIZEE];
 ListArray LIVE_SQUARES;
 ListArray LIVE_SQUARES2;
-//const char PrintableSquare = 171 + '0';
-const uint8_t PrintableSquare = 171;
+const char PrintableSquare = 171 + '0';
+//const uint8_t PrintableSquare = 171;
 
 void create_array(ListArray *d);
 void element_append(ListArray *d, Square v);
@@ -49,7 +49,7 @@ int main()
 	{
 		do_stuff();
 		print_table();
-		//sleep(1);
+		sleep(1);
 	}
 
     destroy_array(&LIVE_SQUARES);
