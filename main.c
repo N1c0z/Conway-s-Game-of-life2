@@ -41,8 +41,8 @@ void create_random_startup();
 int main()
 {
 	srand(time(NULL)); 
-    create_array(&LIVE_SQUARES);
-    create_array(&LIVE_SQUARES2);
+    	create_array(&LIVE_SQUARES);
+    	create_array(&LIVE_SQUARES2);
 	create_random_startup();
 	print_table();
 	while (1)
@@ -62,7 +62,7 @@ void create_array(ListArray *d)
 	if (!temp)
     {
         fprintf(stderr, "Failed to allocate array");            
-		exit(EXIT_FAILURE);
+	exit(EXIT_FAILURE);
     }
 	d->actual_size = d->size = 0;
 	d->content= temp;
@@ -224,12 +224,12 @@ void do_stuff() {
 		for (size_t k = 0; k < TSIZEE; k++)
 			TABLE[i][k] = TABLE2[i][k];
 
-    destroy_array(&LIVE_SQUARES);
-    create_array(&LIVE_SQUARES);
+    	destroy_array(&LIVE_SQUARES);
+    	create_array(&LIVE_SQUARES);
     
 	LIVE_SQUARES = LIVE_SQUARES2;
 
-    create_array(&LIVE_SQUARES2);
+    	create_array(&LIVE_SQUARES2);
 }
 
 void generate_new_cells(Square* square) {
@@ -250,7 +250,7 @@ void generate_new_cells(Square* square) {
 						cSquare.PosX = posx;
 						cSquare.PosY = posy;
 						TABLE2[posx][posy] = 1;
-                        element_append(&LIVE_SQUARES2, cSquare);
+                        			element_append(&LIVE_SQUARES2, cSquare);
 					}
 				}
 			}
