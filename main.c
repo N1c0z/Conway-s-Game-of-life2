@@ -160,16 +160,9 @@ uint8_t surrounding_cells(Square* square) {
 		for (long k = -1; k < 2; k++)
 		{
 			posy = square->PosY + k;
-			if (cell_exists(posx, posy))
+			if (cell_exists(posx, posy) && TABLE[posx][posy] && !((posx == square->PosX)&&(posy == square->PosY)))
 			{
-				if (TABLE[posx][posy])
-				{
-					if (!((posx == square->PosX)&&(posy == square->PosY)))
-					{
-						numOfCells++;
-					}
-					
-				}
+				numOfCells++;
 			}
 		}
 	}
@@ -185,16 +178,9 @@ uint8_t surrounding_cellss(long PosXX, long PosYY) {
 		for (long k = -1; k < 2; k++)
 		{
 			posy = PosYY + k;
-			if (cell_exists(posx, posy))
+			if (cell_exists(posx, posy) && TABLE[posx][posy] && !((posx == PosXX)&&(posy == PosYY)))
 			{
-				if (TABLE[posx][posy])
-				{
-					if (!((posx == PosXX)&&(posy == PosYY)))
-					{
-						numOfCells++;
-					}
-				}
-
+				numOfCells++;
 			}
 		}
 	}
